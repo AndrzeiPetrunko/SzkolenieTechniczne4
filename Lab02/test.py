@@ -1,4 +1,5 @@
 class Cos:
+    attr = 1000
     pass
 obj = Cos()
 obj.__class__
@@ -21,3 +22,8 @@ f = Cos()
 print(f.attr)
 g = Cos()
 print(g.attr)
+
+
+Klasa = type('Klasa', (Cos,), {'attr': 100})
+y = Klasa()
+print(y.__class__.__bases__)
