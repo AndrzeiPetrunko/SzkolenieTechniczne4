@@ -5,7 +5,7 @@ class Osoba:
 
 class Niewolnik:
     def __init__(self):
-        print("Niewolnik został dodany jako klasa bazowa.")
+        pass
 
 class MetaDodajNiewolnika(type):
     def __new__(cls, name, bases, class_dict):
@@ -19,3 +19,5 @@ class Pracownik(Osoba, metaclass=MetaDodajNiewolnika):
         self.stanowisko = stanowisko
 
 pracownik = Pracownik("Jan", "Kowalski", "Inżynier")
+
+print(pracownik.__class__.__bases__)
