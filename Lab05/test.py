@@ -101,3 +101,15 @@ class Person:
 print(Person.class_name)
 
 ###
+
+class Employee:
+    raise_amount = 1.05
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+    @classmethod
+    def set_raise_amount(cls, amount):
+        cls.raise_amount = amount
+ # Using the class method
+Employee.set_raise_amount(1.10)
+print(Employee.raise_amount)
